@@ -23,8 +23,13 @@ public class Multiplier {
      * Generally, field injection is not recommended, but it works for this example.
      * @param adder
      */
-    Adder adder;
-
+    @Autowired
+    private Adder adder;
+    private Multiplier multiplier;
+    public void Multiplier() {
+        this.adder = new Adder();
+    }
+  
     /**
      * Instead of using the * operator normally, leverage the Adder dependency to multiply numbers the hard way
      * @param a number 1
@@ -38,6 +43,7 @@ public class Multiplier {
         }
         // Handle edge case of negative b
         if(b < 0) result *= -1;
+        
         return result;
     }
 }

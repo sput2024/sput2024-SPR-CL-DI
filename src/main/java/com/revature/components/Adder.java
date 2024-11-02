@@ -16,6 +16,7 @@ import org.springframework.stereotype.Component;
  *
  * There is no need to change anything within this class.
  */
+
 @Component
 public class Adder {
     /**
